@@ -14,16 +14,77 @@ body {
   width: 95%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin: 0 auto 20px auto;
 }
 
 .color-card {
-  height: 400px;
+  height: 380px;
   width: 250px;
-  margin: 0 14px;
+  border-radius: 4px;
   border: solid 2px black;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+}
+
+.new-palette {
+  height: 60px;
+  width: 249px;
+  margin: 20px auto;
+  font-size: 18px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 4px;
+  border-bottom: 4px solid rgb(26, 26, 26);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.new-palette:hover {
+  border-bottom: 2px solid black;
+}
+
+.palette-form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.drop-down {
+  height: 37px;
+  width: 150px;
+  font-size: 14px;
+  padding-left: 10px;
+  /* border-radius: 4px; */
+}
+
+.palette-name-input {
+  height: 28px;
+  border: solid 2px black;
+  border-radius: 4px;
+  padding-left: 5px;
+  width: 249px;
+  margin: 0 21px;
+  font-size: 14px;
+}
+
+.save-palette {
+  height: 33px;
+  width: 120px;
+  border: solid 2px black;
+  border-radius: 4px;
+  padding-left: 5px;
+  background-color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.new-palette-container {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  width: 600px;
 }
