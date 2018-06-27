@@ -32,7 +32,23 @@ router.get('/api/v1/palettes/', (request, response) => {
 
 
 router.post('/api/v1/palettes/', (request, response) => {
+  const { palette } = request.body;
 
+  for(let requiredParameter of ['name', 'color-one', 'color-two', 'color-three', 'color-four', 'color-five', 'project_id' ]) {
+    if (!palette[requiredParameter]) {
+      return response
+        .status(422)
+        .send({ error: `Expected format: { name: <String>, color-one: <String>, color-two <String>, color-three: <String>, color-four: <String>, color-five: <String> }. You're missing a "${requiredParameter}" property.`});
+    }
+  }
+  
+  database('palettes').insert(palette, 'id')
+    .then(palette => {
+      response.status(201).json({ id: palette[0] })
+    })
+    .catch(error => {
+      response.status(500).json({ error })
+    });
 });
 
 router.post('/api/v1/projects/', (request, response) => {
