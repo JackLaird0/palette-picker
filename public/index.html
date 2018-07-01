@@ -10,37 +10,35 @@
 <body>
   <h1 class='title'>Palette Picker</h1>
   <div class="color-card-container">
-    <div class="color-card color-card1">
+    <div class="color-card">
       <p class="lock">Lock</p>
       <p class="hex-value hex-value1">#123456</p>
     </div>
-    <div class="color-card color-card2">
+    <div class="color-card">
       <p class="lock">Lock</p>
       <p class="hex-value hex-value2">#123456</p>
     </div>
-    <div class="color-card color-card3">
+    <div class="color-card">
       <p class="lock">Lock</p>
       <p class="hex-value hex-value3">#123456</p>
     </div>
-    <div class="color-card color-card4">
+    <div class="color-card">
       <p class="lock">Lock</p>
       <p class="hex-value hex-value4">#123456</p>
     </div>
-    <div class="color-card color-card5">
+    <div class="color-card">
       <p class="lock">Lock</p>
       <p class="hex-value hex-value5">#123456</p>
     </div>
   </div>
-  <form class="palette-form">
+  <div class="generate-container">
     <button class="new-palette">
       Generate a New Palette!
     </button>
+  </div>
+  <form class="palette-form">
     <div class="new-palette-container">
       <select class='drop-down'>
-        <option value="project">Project 1</option>
-        <option value="project">Project 2</option>
-        <option value="project">Project 3</option>
-        <option value="project">Project 4</option>
       </select>
       <input type="text" placeholder="Palette Name" class='palette-name-input'>
       <button class='save-palette'> Save Palette </button>
@@ -54,39 +52,6 @@
     </div>
   </div>
   <div class="projects-container">
-    <div class="project-name">
-      <h3>Project 1</h3>
-      <div class="palette">
-        <p class="palette-name">Palette 1</p>
-        <div class="color-sample sample1"></div>
-        <div class="color-sample sample2"></div>
-        <div class="color-sample sample3"></div>
-        <div class="color-sample sample4"></div>
-        <div class="color-sample sample5"></div>
-        <p class='trash-can'>Trash Can</p>
-      </div>
-      <div class="palette">
-        <p class="palette-name">Palette 2</p>
-        <div class="color-sample sample1"></div>
-        <div class="color-sample sample2"></div>
-        <div class="color-sample sample3"></div>
-        <div class="color-sample sample4"></div>
-        <div class="color-sample sample5"></div>
-        <p class='trash-can'>Trash Can</p>
-      </div>
-    </div>
-    <div class="project-name">
-      <h3>Project 2</h3>
-        <div class="palette">
-          <p class="palette-name">Palette 3</p>
-          <div class="color-sample sample1"></div>
-          <div class="color-sample sample2"></div>
-          <div class="color-sample sample3"></div>
-          <div class="color-sample sample4"></div>
-          <div class="color-sample sample5"></div>
-          <p class='trash-can'>Trash Can</p>
-        </div>
-      </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="./scripts/scripts.js"></script>
