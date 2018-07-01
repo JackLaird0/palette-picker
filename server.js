@@ -8,6 +8,7 @@ const database = require('knex')(configuration);
 router.use(bodyParser.json());
 router.use(express.static('public'));
 
+
 router.set('port', process.env.PORT || 5280);
 
 router.get('/api/v1/projects/', (request, response) => {
@@ -38,7 +39,7 @@ router.post('/api/v1/palettes/', (request, response) => {
     if (!palette[requiredParameter]) {
       return response
         .status(422)
-        .send({ error: `Expected format: { name: <String>, color-one: <String>, color-two <String>, color-three: <String>, color-four: <String>, color-five: <String> }. You're missing a "${requiredParameter}" property.`});
+        .send({ error: `Expected format: { name: <String>, color-one: <String>, color-two <String>, color-three: <String>, color-four: <String>, color-five: <String>, project_id: <Number> }. You're missing a "${requiredParameter}" property.`});
     }
   }
   
@@ -70,6 +71,20 @@ router.post('/api/v1/projects/', (request, response) => {
       response.status(500).json({ error })
     });
 });
+
+router.delete('/api/v1/palettes/:id', (request, response) => {
+  const { id } = request.params;
+
+  database('palettes').where('id', id).del()
+    .then(() => {
+      response.status(202).json({
+        id
+      })
+    })
+
+
+
+})
 
 router.listen(router.get('port'), () => {
   console.log(`Palette Picker is running on ${router.get('port')}.`)
