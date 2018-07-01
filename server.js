@@ -1,5 +1,5 @@
-const express = require('express');
-const router = express();
+const express = require('express'); //import express
+const router = express(); // set router to equal express
 const bodyParser = require('body-parser');
 const environment = process.env.NODE_ENV || 'development';
 const configuration = require('./knexfile')[environment];
