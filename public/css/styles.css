@@ -42,6 +42,10 @@ body {
   cursor: pointer;
 }
 
+.generate-container {
+  text-align: center;
+}
+
 .new-palette:hover {
   border-bottom: 2px solid black;
 }
