@@ -79,13 +79,12 @@ router.delete('/api/v1/palettes/:id', (request, response) => {
     .then(() => {
       response.status(202).json({
         id
-      })
-    })
-
-
-
-})
+      });
+    });
+});
 
 router.listen(router.get('port'), () => {
   console.log(`Palette Picker is running on ${router.get('port')}.`)
 });
+
+module.exports = router;
