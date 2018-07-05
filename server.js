@@ -72,6 +72,8 @@ router.post('/api/v1/projects/', (request, response) => {
     });
 });
 
+// Good comment here
+
 router.delete('/api/v1/palettes/:id', (request, response) => {
   const { id } = request.params;
 
